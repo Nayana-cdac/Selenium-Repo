@@ -1,5 +1,7 @@
 package browserInitialization;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,6 +15,7 @@ public class Base {
  //	driver=new FirefoxDriver(); 
  	driver.get("https://selenium.qabible.in/index.php"); 
  	driver.manage().window().maximize(); // maximize the window
+ 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// implicit wait
  	} 
  public void driverQuit() 
  { 
